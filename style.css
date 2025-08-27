@@ -86,7 +86,7 @@ body {
   padding: 2rem;
   margin: 0 var(--hero-gap) calc(var(--hero-gap) + 1px);
   display: flex;
-  min-height: calc(100svh - var(--nav-h) - var(--hero-gap) - 16px);
+  min-height: calc(100svh - var(--nav-h) - var(--hero-gap));
   justify-content: space-between;
   background: linear-gradient(#00000099, #00000099),
     url("./assets/heroBackground/hero-bg.jpg") no-repeat center / cover;
@@ -594,14 +594,20 @@ textarea:focus-visible {
 }
 
 /* Alternar botones abrir/cerrar en móvil */
-.nav-open { display: inline-grid; }
-.nav-close { display: none; }
-#nav:target .nav-open { display: none; }
-#nav:target .nav-close { display: inline-grid; }
-
+.nav-open {
+  display: inline-grid;
+}
+.nav-close {
+  display: none;
+}
+#nav:target .nav-open {
+  display: none;
+}
+#nav:target .nav-close {
+  display: inline-grid;
+}
 
 /* Mostrar menú cuando el toggle está activado */
-
 
 /* Desktop/Tablet: menú en línea sin hamburguesa */
 @media (min-width: 768px) {
@@ -639,7 +645,9 @@ textarea:focus-visible {
 }
 
 @media (min-width: 768px) {
-  .nav-btn { display: none; }
+  .nav-btn {
+    display: none;
+  }
   .nav-list {
     position: static;
     display: flex;
